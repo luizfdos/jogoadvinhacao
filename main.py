@@ -1,6 +1,7 @@
 from random import randint
 from time import sleep
 from termcolor import colored
+import os
 
 def jogo():
     title = "ADIVINHAÇÃO"
@@ -24,7 +25,7 @@ def jogo():
 def jogarnovamente():
         escolha = str(input('Deseja jogar novamente?(S/N) '))
         if escolha.upper() == 'S':
-            print('REINICIANDO...', 'blue')
+            print(colored('REINICIANDO...', 'blue'))
             sleep(2)
             os.system('cls' if os.name == 'nt' else 'clear')
             jogo()
