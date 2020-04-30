@@ -24,6 +24,9 @@ def jogo():
 def jogarnovamente():
         escolha = str(input('Deseja jogar novamente?(S/N) '))
         if escolha.upper() == 'S':
+            print('REINICIANDO...', 'blue')
+            sleep(2)
+            os.system('cls' if os.name == 'nt' else 'clear')
             jogo()
         elif escolha.upper() == 'N':
             print(colored('Até a proxima!!', 'blue'))
